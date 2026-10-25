@@ -2,6 +2,7 @@ package kz.aitu.navigation;
 
 import kz.aitu.navigation.strategy.CarStrategy;
 import kz.aitu.navigation.strategy.CycleStrategy;
+import kz.aitu.navigation.strategy.PublicTransportStrategy;
 import kz.aitu.navigation.strategy.RouteStrategy;
 import kz.aitu.navigation.strategy.WalkStrategy;
 
@@ -32,6 +33,7 @@ public class Main {
         strategies.put("car", new CarStrategy());
         strategies.put("walk", new WalkStrategy());
         strategies.put("cycle", new CycleStrategy());
+        strategies.put("bus", new PublicTransportStrategy());
         return strategies;
     }
 
