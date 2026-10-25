@@ -1,0 +1,46 @@
+classDiagram
+    direction LR
+    class Main {
+        <<Client>>
+        +main(args)
+    }
+    class Navigator {
+        <<Context>>
+        -RouteStrategy strategy
+        +Navigator(RouteStrategy)
+        +setStrategy(RouteStrategy)
+        +getStrategy() RouteStrategy
+        +planRoute(Location, Location) Route
+    }
+    class RouteStrategy {
+        <<interface>>
+        +travelMode() String
+        +buildRoute(Location, Location) Route
+    }
+    class CarStrategy
+    class WalkStrategy
+    class CycleStrategy
+    class PublicTransportStrategy
+    class Location {
+        <<record>>
+        +name
+        +latitude
+        +longitude
+        +straightLineDistanceKmTo(Location) double
+    }
+    class Route {
+        <<record>>
+        +travelMode
+        +distanceKm
+        +durationMinutes
+        +steps
+    }
+    Main ..> Navigator : creates, setStrategy()
+    Main ..> RouteStrategy : selects concrete
+    Navigator o--> RouteStrategy : delegates to
+    RouteStrategy <|.. CarStrategy
+    RouteStrategy <|.. WalkStrategy
+    RouteStrategy <|.. CycleStrategy
+    RouteStrategy <|.. PublicTransportStrategy
+    RouteStrategy ..> Route : returns
+    RouteStrategy ..> Location : uses
