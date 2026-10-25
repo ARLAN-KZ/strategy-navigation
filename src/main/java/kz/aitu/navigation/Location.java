@@ -1,11 +1,11 @@
 package kz.aitu.navigation;
 
-/** A named geographic point (WGS-84 latitude/longitude, in degrees). */
+
 public record Location(String name, double latitude, double longitude) {
 
     private static final double EARTH_RADIUS_KM = 6371.0;
 
-    /** Great-circle (straight-line) distance to another location, using the Haversine formula. */
+
     public double straightLineDistanceKmTo(Location other) {
         double dLat = Math.toRadians(other.latitude - latitude);
         double dLon = Math.toRadians(other.longitude - longitude);

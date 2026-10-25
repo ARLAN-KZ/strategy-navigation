@@ -3,7 +3,7 @@ package kz.aitu.navigation;
 import java.util.List;
 import java.util.Locale;
 
-/** Immutable result of route planning. */
+
 public record Route(String travelMode, Location from, Location to,
                     double distanceKm, int durationMinutes, List<String> steps) {
 

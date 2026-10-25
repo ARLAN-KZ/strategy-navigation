@@ -4,10 +4,7 @@ import kz.aitu.navigation.strategy.RouteStrategy;
 
 import java.util.Objects;
 
-/**
- * Context. Knows only the {@link RouteStrategy} interface and delegates planning to it.
- * The strategy can be replaced at runtime; there is no if/switch on the travel mode here.
- */
+
 public class Navigator {
 
     private RouteStrategy strategy;

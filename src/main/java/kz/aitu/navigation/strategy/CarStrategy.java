@@ -6,7 +6,7 @@ import kz.aitu.navigation.Route;
 import java.util.List;
 import java.util.Locale;
 
-/** Driving: follows the road network (detour factor), average city speed, parking at the end. */
+
 public class CarStrategy implements RouteStrategy {
 
     private static final double ROAD_DETOUR_FACTOR = 1.30;

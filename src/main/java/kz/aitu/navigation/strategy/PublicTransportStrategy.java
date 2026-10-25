@@ -6,7 +6,7 @@ import kz.aitu.navigation.Route;
 import java.util.List;
 import java.util.Locale;
 
-/** Bus: added later to demonstrate Open/Closed - no existing class except the client registry changed. */
+
 public class PublicTransportStrategy implements RouteStrategy {
 
     private static final double BUS_ROUTE_DETOUR_FACTOR = 1.40;

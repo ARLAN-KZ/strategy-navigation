@@ -6,7 +6,7 @@ import kz.aitu.navigation.Route;
 import java.util.List;
 import java.util.Locale;
 
-/** Cycling: prefers bike lanes (small detour), 15 km/h, plus time to lock the bike. */
+
 public class CycleStrategy implements RouteStrategy {
 
     private static final double BIKE_LANE_DETOUR_FACTOR = 1.20;

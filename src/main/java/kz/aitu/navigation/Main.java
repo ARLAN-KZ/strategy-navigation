@@ -10,7 +10,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-/** Client: chooses and configures strategies; switches them at runtime. */
+
 public class Main {
 
     public static void main(String[] args) {
@@ -27,7 +27,7 @@ public class Main {
         }
     }
 
-    /** The only place that knows concrete strategy classes. */
+
     private static Map<String, RouteStrategy> registerStrategies() {
         Map<String, RouteStrategy> strategies = new LinkedHashMap<>();
         strategies.put("car", new CarStrategy());

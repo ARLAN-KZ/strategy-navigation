@@ -6,7 +6,7 @@ import kz.aitu.navigation.Route;
 import java.util.List;
 import java.util.Locale;
 
-/** Walking: nearly straight path through pedestrian zones at 5 km/h. */
+
 public class WalkStrategy implements RouteStrategy {
 
     private static final double PEDESTRIAN_DETOUR_FACTOR = 1.10;
